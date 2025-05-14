@@ -1,17 +1,17 @@
 %-------------------------
 % Resume in LaTeX
 % Author : Avni Sanghvi
+% Version : 2.0.0
 % License : MIT
 %------------------------
 
-
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper, 11pt]{article}
 \usepackage{enumitem}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames, dvipsnames]{color}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
@@ -28,8 +28,8 @@
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -38,9 +38,11 @@
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{ \vspace{-4pt}\scshape\raggedright\large }{}{0em}{}[
+\color{black}
+\titlerule
+\vspace{-5pt}
+]
 
 % Ensure PDF is machine-readable/ATS parsable
 \pdfgentounicode=1
@@ -48,165 +50,130 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{\item\small{#1\vspace{-2pt}}}
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}
+\vspace{-4pt}}
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
+\vspace{-2pt}
+\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+	\textbf{#1}       & #2                 \\
+	\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}
+\vspace{-7pt}
 }
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}
+\vspace{5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+	%----------HEADING----------
+	\begin{center}
+		\textbf{\Huge \scshape Avni Sanghvi} \\
+		\vspace{1pt}
+		\small +1 312-774-0767 $|$ \href{mailto:avnikhandhar.us@gmail.com}{\underline{avnikhandhar.us@gmail.com}}
+		$|$ \href{https://www.linkedin.com/in/avnisanghvi}{\underline{linkedin.com/in/avnisanghvi}}
+		$|$ \href{https://public.tableau.com/app/profile/avni.sanghvi/vizzes}{\underline{Tableau Portfolio}}
+	\end{center}
 
-%----------HEADING----------
-\begin{center}
-    \textbf{\Huge \scshape Avni Sanghvi} \\ \vspace{1pt}
-    \small +1 312-774-0767 $|$ \href{mailto:avnikhandhar.us@gmail.com}{\underline{avnikhandhar.us@gmail.com}} $|$
-    \href{https://www.linkedin.com/in/avnisanghvi}{\underline{linkedin.com/in/avnisanghvi}} $|$
-    \href{https://public.tableau.com/app/profile/avni.sanghvi/vizzes}{\underline{Tableau Portfolio}}
-\end{center}
+	%-----------EXPERIENCE-----------
+	\section{Experience}
+	\resumeSubHeadingListStart \resumeSubheading {Senior Database Administrator}{Mar 2021 – Feb 2025}
+	{Wipro Technologies}{Mumbai, India} \resumeItemListStart \resumeItem{Led end-to-end administration of \textbf{Oracle NoSQL Database} in a high-availability, 24x7 production environment, achieving \textbf{99.9\% uptime} across enterprise clients.}
+	\resumeItem{Resolved performance bottlenecks and outages, \textbf{reducing incident resolution time by 25\%} and enhancing MTTR.}
+	\resumeItem{Optimized query performance by 30\% and reduced manual reporting time by 40\% through indexing and scripting.}
+	\resumeItem{Automated routine tasks using \textbf{Linux CLI}, increasing efficiency of daily health checks and system operations.}
+	\resumeItem{Designed and implemented \textbf{backup, recovery, and replication strategies}, ensuring disaster recovery readiness.}
+	\resumeItem{Implemented centralized logging via ELK stack, \textbf{decreasing MTTR by 40\%} and enabling faster root cause analysis.}
+	\resumeItem{Projected storage capacity using quarterly data analysis, resulting in \textbf{20\% fewer unplanned outages}.}
+	\resumeItem{Collaborated with developers, QA, and DevOps to align database strategy and delivery goals.}
+	\resumeItemListEnd \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Senior Database Administrator}{Mar 2021 – Feb 2025}
-    {Wipro Technologies}{Mumbai, India}
-    \resumeItemListStart
-      \resumeItem{Led end-to-end administration of Oracle NoSQL Database (v23.1) in a high-availability, 24x7 production environment, achieving 99.9\% uptime across multiple enterprise clients.}
-      \resumeItem{Troubleshot and resolved complex performance bottlenecks and system outages, reducing incident resolution time by 25\% and improving mean time to recovery (MTTR).}
-      \resumeItem{Optimized database queries and indexing strategies, boosting query performance by 30\% and cutting down manual reporting effort by 40\%.}
-      \resumeItem{Streamlined database operations by scripting administrative tasks using Linux CLI and automating daily health checks, improving operational efficiency.}
-      \resumeItem{Designed and implemented robust backup, recovery, and replication strategies ensuring data integrity and disaster recovery readiness.}
-      \resumeItem{Integrated and managed ELK Stack (Elasticsearch, Logstash, Kibana) to monitor cluster health, enabling real-time diagnostics and accelerating issue resolution.}
-      \resumeItem{Led proactive storage forecasting and capacity planning, reducing unplanned outages by 20\% and ensuring optimal resource utilization.}
-      \resumeItem{Collaborated with cross-functional teams including application developers, QA, and DevOps to align database strategies with project goals and deployment pipelines.}
-      \resumeItem{Mentored junior DBAs and created documentation for best practices in NoSQL database tuning, contributing to team scalability and knowledge retention.}
-    \resumeItemListEnd
-\resumeSubHeadingListEnd
+	%-----------EDUCATION-----------
+		\section{Education}
+		\resumeSubHeadingListStart 
+		\resumeSubheading {Chhattisgarh Swami Vivekanand Technical University}{Jun 2020}{Bachelor of Technology in Computer Science -- 8.89/10}{Bhilai, India}
+		\vspace{6pt} 
+		\resumeSubheading{Holy Hearts Educational Academy}{Apr 2016}{Higher Secondary Certificate -- 75\%}{Raipur, India}
+		\vspace{6pt} 
+		\resumeSubheading {Holy Hearts Educational Academy}{Apr 2014}{Secondary School Certificate -- 9.4/10}{Raipur, India}
+		\resumeSubHeadingListEnd
+		\vspace{6pt}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Chhattisgarh Swami Vivekanand Technical University}{June 2020}
-    {Bachelor of Technology in Computer Science -- 8.89/10}{Bhilai, India}
-  \resumeSubheading
-    {Holy Hearts Educational Academy}{April 2016}
-    {Higher Secondary Certificate -- 75\%}{Raipur, India}
-  \resumeSubheading
-    {Holy Hearts Educational Academy}{April 2014}
-    {Secondary School Certificate -- 9.4/10}{Raipur, India}
-\resumeSubHeadingListEnd
+	%-----------CERTIFICATIONS-----------
+	\section{Certification}
+	\resumeSubHeadingListStart 
+	\resumeSubheading{Machine Learning Program (Certificate Course)}{May 2024} {National Institute of Information Technology}{Mumbai, India}
+	\resumeItemListStart 
+	\resumeItem{Hands-on experience with EDA, data wrangling, model selection, and evaluation in Python.}
+	\resumeItem{Built Tableau dashboards for storytelling and data-driven decision-making.}
+	\resumeItem{Performed SQL-based data analysis for business intelligence tasks.}
+	\resumeItemListEnd 
+	\resumeSubHeadingListEnd
 
-%-----------CERTIFICATIONS-----------
-\section{Certification}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Machine Learning Program (Certificate Course)}{May 2024}
-    {National Institute of Information Technology}{India}
-    \resumeItemListStart
-      \resumeItem{Developed a strong foundation in \textbf{data pre-processing}, cleaning, and transformation, emphasizing real-world data integrity.}
-      \resumeItem{Utilized \textbf{MS Excel} for advanced data analysis and visualization.}
-      \resumeItem{Applied \textbf{SQL} for efficient querying and manipulation of relational data.}
-      \resumeItem{Gained proficiency in \textbf{Python for Data Science} with libraries such as Pandas, NumPy, Matplotlib, and Seaborn.}
-      \resumeItem{Built dashboards using \textbf{Tableau} to tell compelling stories through data.}
-      \resumeItem{Engineered and tested \textbf{machine learning models} (classification, regression) using scikit-learn.}
-      \resumeItem{Completed a \textbf{capstone project} simulating full-cycle data science workflow from analysis to deployment.}
-    \resumeItemListEnd
-\resumeSubHeadingListEnd
+	%-----------ACCOMPLISHMENTS-----------
+	\section{Accomplishments}
+	\resumeItemListStart \resumeItem{Secured \textbf{2nd position} at the \textbf{State Level} in UCMAS Abacus competition among \textbf{500+ participants}.}
+	\resumeItem{Achieved \textbf{National-level Consolation Prize} in UCMAS Abacus out of \textbf{2000+ contestants} across India.}
+	\resumeItemListEnd
 
-%-----------ACCOMPLISHMENTS-----------
-\section{Accomplishments}
-  \resumeItemListStart
-    \resumeItem{State-level (West Bengal, India) Runner-up in UCMAS, Abacus.}
-    \resumeItem{National-level (India) Consolation Prize holder in UCMAS, Abacus.}
-  \resumeItemListEnd
+	%-----------TECHNICAL SKILLS-----------
+	\section{Technical Skills}
+	\resumeSubHeadingListStart \item{\textbf{Languages:} Python, SQL, Java, C, C++}\\
+	\item{\textbf{Libraries:} Tensorflow, OpenCV, Pandas, Scikit-learn, Matplotlib, Seaborn}\\
+	\item{\textbf{Databases:} MySQL, Oracle NoSQL, PostgreSQL}\\ \item{\textbf{Tools:} Jupyter, Tableau, Excel, Linux, Git}\\
+	\item{\textbf{Techniques:} Data Wrangling, Classification, Regression, Clustering, Feature Engineering, Model Evaluation}
+	\resumeSubHeadingListEnd
 
+	%-----------PROJECTS-----------
+	\section{Projects}
+	\resumeSubHeadingListStart 
+	\resumeSubheading {Genre \& Rating Prediction}{}{Python, scikit-learn, pandas, Tableau}{}
+	\resumeItemListStart 
+	\resumeItem{Developed a genre and rating classifier for 1,000+ films of IMDB dataset, using structured metadata and ensemble models.}
+	\resumeItemListEnd
 
-%-----------PROJECTS-----------
-\section{Projects}
-\resumeSubHeadingListStart
+	\resumeSubheading {Regional Sales Pattern}{}{Python, Tableau, Excel, Figma}{} 
+	\resumeItemListStart
+	\resumeItem{Analyzed global sales data of around 2,500 cars to identify top-performing product categories across countries and cities, optimizing product selection and deal sizing to maximize revenue based on sales targets.}
+	\resumeItemListEnd
 
-  \resumeSubheading
-    {IMDB Data Analysis}{}{Python, MS Office, Tableau}{}
-    \resumeItemListStart
-      \resumeItem{Built classification models to predict movie revenue, genre, and ratings using preprocessed JSON data.}
-    \resumeItemListEnd
-  \vspace{4pt}
+	\resumeSubheading {Rental Behavior Analysis}{}{MySQL, Excel}{} 
+	\resumeItemListStart
+	\resumeItem{Examined over 1000 movie rental records to determine frequently preferred movie genres, enabling optimized inventory stocking and ensuring smoother rental operations.}
+	\resumeItemListEnd
 
-  \resumeSubheading
-    {Automobile Data Set Analysis}{}{Python, MS Excel, Tableau, Figma}{}
-    \resumeItemListStart
-      \resumeItem{Analyzed product sales trends across regions and categories to identify business insights.}
-    \resumeItemListEnd
-  \vspace{4pt}
+	\resumeSubheading {TMDB Movie Metrics Exploration}{}{Python, matplotlib, seaborn}{}
+	\resumeItemListStart 
+	\resumeItem{Evaluated 4,000+ movie records to identify high-performing genres that yield strong audience ratings and revenue, helping stakeholders prioritize commercially viable films with optimized budgets.}
+	\resumeItemListEnd
 
-  \resumeSubheading
-    {Movie Rental Data Analysis}{}{MySQL, MS Office}{}
-    \resumeItemListStart
-      \resumeItem{Explored rental patterns to determine top-performing genres, customers, and actors.}
-    \resumeItemListEnd
-  \vspace{4pt}
+	\resumeSubheading {Customer Retention Insights}{}{Tableau, Excel}{} 
+	\resumeItemListStart
+	\resumeItem{Segmented 7,000+ customers by behavior and demographics; revealed churn patterns using Tableau dashboards.}
+	\resumeItemListEnd
 
-  \resumeSubheading
-    {TMDB Movie Data Analysis}{}{Python, MS Office}{}
-    \resumeItemListStart
-      \resumeItem{Performed EDA to understand the factors contributing to movie success and audience engagement.}
-    \resumeItemListEnd
-  \vspace{4pt}
+	\resumeSubheading {Insurance Premium Estimation}{}{Python, scikit-learn}{}
+	\resumeItemListStart 
+	\resumeItem{Engineered regression models to forecast health insurance premiums for 1,000+ policyholders.}
+	\resumeItemListEnd
 
-  \resumeSubheading
-    {Customer Churn Analysis}{}{Tableau, MS Office}{}
-    \resumeItemListStart
-      \resumeItem{Created dashboards to analyze churn drivers and inform a 10\% churn reduction strategy.}
-    \resumeItemListEnd
-  \vspace{4pt}
+	\resumeSubheading {Banking Customer Churn Prediction}{}{Python, scikit-learn}{}
+	\resumeItemListStart 
+	\resumeItem{Trained classification models on 10,000+ records to predict churn with 82\% precision using Random Forest.}
+	\resumeItemListEnd
 
-  \resumeSubheading
-    {Prediction of Insurance Premium}{}{Python for ML, MS Office}{}
-    \resumeItemListStart
-      \resumeItem{Developed regression models to forecast premium costs and improve risk pricing.}
-    \resumeItemListEnd
-  \vspace{4pt}
+	\resumeSubheading {Employee Absenteeism Pattern Analysis}{}{Python, scikit-learn}{}
+	\resumeItemListStart 
+	\resumeItem{Studied employee absenteeism patterns across departments to uncover root causes impacting productivity; findings contributing to actionable strategies that improve team efficiency by 15\%.}
+	\resumeItemListEnd
 
-  \resumeSubheading
-    {Prediction of Customer Churn in Banking}{}{Python for ML, MS Office}{}
-    \resumeItemListStart
-      \resumeItem{Implemented classification algorithms to identify customers at risk of churn.}
-    \resumeItemListEnd
-  \vspace{4pt}
-
-  \resumeSubheading
-    {Prediction of Absenteeism in Employees}{}{Python for ML, MS Office}{}
-    \resumeItemListStart
-      \resumeItem{Built models to classify and cluster absenteeism patterns for HR policy refinement.}
-    \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-
-
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
-\resumeSubHeadingListStart
-  \item{
-    \textbf{Languages}{: Python, Java, C, C++} \\
-    \textbf{Tools}{: MS Office, Tableau, SQL, Oracle NoSQL} \\
-    \textbf{Operating Systems}{: Windows, Linux}
-  }
-\resumeSubHeadingListEnd
-
-
+	\resumeSubHeadingListEnd
 \end{document}
